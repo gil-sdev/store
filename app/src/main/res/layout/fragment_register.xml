@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.gallery.FormPrenda">
+
+    <TextView
+        android:id="@+id/lblImagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Imagen"
+        android:textAlignment="center"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imgRopa"
+        android:layout_width="396dp"
+        android:layout_height="158dp"
+        android:contentDescription="toque para garadar imagen"
+        tools:src="@android:mipmap/sym_def_app_icon" />
+
+    <TextView
+        android:id="@+id/lblCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Codigo producto" />
+
+    <EditText
+        android:id="@+id/txtCodigo"
+        android:layout_width="398dp"
+        android:layout_height="71dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:text="RINF01" />
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre del producto" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:text="Playera" />
+    <TextView
+        android:id="@+id/lblTalla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Talla" />
+
+    <Spinner
+        android:id="@+id/spnierTalla"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:entries="@array/tallas" />
+    <TextView
+        android:id="@+id/lblPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Precio unitario" />
+    <EditText
+        android:id="@+id/txtPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:maxLength="10"
+        android:text="50" />
+
+    <TextView
+        android:id="@+id/lblStcok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cantidad"
+        />
+
+    <EditText
+        android:id="@+id/txtStock"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:text="12" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="389dp"
+        android:layout_height="74dp"
+        android:text="Guardar" />
+
+</LinearLayout>
