@@ -23,6 +23,7 @@ public class DataAdapterRopa extends RecyclerView.Adapter<DataAdapterRopa.ViewHo
     }
     @NonNull
     @Override
+// It's inflating the layout for each row in the RecyclerView.
     public DataAdapterRopa.ViewHolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.listitem,null,false);
         return new ViewHolderData(view);
@@ -45,6 +46,10 @@ public class DataAdapterRopa extends RecyclerView.Adapter<DataAdapterRopa.ViewHo
          return listData.size();
     }
 
+ /**
+  * > This class is a subclass of RecyclerView.ViewHolder, and it's used to hold the data for each row
+  * in the RecyclerView
+  */
     public class ViewHolderData extends RecyclerView.ViewHolder {
         TextView screenCodigo, screenNombre, screenCantidad, screenTalla, screenPrecio;
         ImageView imgRopa;
@@ -57,9 +62,6 @@ public class DataAdapterRopa extends RecyclerView.Adapter<DataAdapterRopa.ViewHo
             screenTalla = (TextView) itemView.findViewById(R.id.screenTalla);
             screenPrecio = (TextView) itemView.findViewById(R.id.screenPrecio);
             imgRopa = (ImageView) itemView.findViewById(R.id.imgRopa);
-
-
-
         }
     }
 }

@@ -12,7 +12,6 @@ public class FromPrendaViewModel extends ViewModel {
         mText = new MutableLiveData<>();
         mText.setValue("fragment register");
     }
-
     public LiveData<String> getText() {
         return mText;
     }

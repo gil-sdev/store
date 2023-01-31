@@ -7,7 +7,7 @@
     <ImageView
         android:id="@+id/imgRopa"
         android:layout_width="157dp"
-        android:layout_height="142dp"
+        android:layout_height="121dp"
         android:layout_marginTop="10dp"
         android:src="@mipmap/clothes" />
 

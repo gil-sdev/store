@@ -3,6 +3,9 @@ package com.example.store.sqlite;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+/**
+ * It creates a database helper class that extends SQLiteOpenHelper.
+ */
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "productos_prueba.db";

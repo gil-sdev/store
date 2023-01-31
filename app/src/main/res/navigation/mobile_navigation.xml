@@ -22,4 +22,5 @@
         android:name="com.example.store.ui.home.HomeFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
 </navigation>

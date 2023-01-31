@@ -1,5 +1,8 @@
 package com.example.store.model;
 
+/**
+ * It creates a class called Ropa.
+ */
 public class Ropa {
     public Integer getId() {
         return id;
