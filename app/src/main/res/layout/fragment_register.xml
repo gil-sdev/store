@@ -27,7 +27,6 @@
         android:src="@mipmap/clothes" />
 
     <TextView
-        android:id="@+id/lblCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Codigo producto" />
@@ -42,7 +41,6 @@
         android:maxLines="1"
         android:text="RINF01" />
     <TextView
-        android:id="@+id/lblName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nombre del producto" />
@@ -57,7 +55,6 @@
         android:maxLines="1"
         android:text="Playera" />
     <TextView
-        android:id="@+id/lblTalla"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Talla" />
@@ -68,7 +65,6 @@
         android:layout_height="62dp"
         android:entries="@array/tallas" />
     <TextView
-        android:id="@+id/lblPrecio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Precio unitario" />
@@ -82,7 +78,6 @@
         android:text="50" />
 
     <TextView
-        android:id="@+id/lblStcok"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cantidad"
