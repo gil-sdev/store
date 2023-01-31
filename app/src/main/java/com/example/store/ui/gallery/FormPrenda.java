@@ -79,6 +79,7 @@ public class FormPrenda extends Fragment {
     View.OnClickListener btnGuardar = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+          /*
             String data = "";
             data += imgRopa.getTag() +"";
             data += txtCodigo.getText() +"\n";
@@ -86,7 +87,7 @@ public class FormPrenda extends Fragment {
             data += spnierTalla.getSelectedItem() +"";
             data += txtPrecio.getText()+"";
             data += txtStock.getText()+ "";
-
+*/
             prenda.setCodigo(txtCodigo.getText()+"");
             prenda.setNombre(txtName.getText()+"");
             prenda.setTalla(spnierTalla.getSelectedItem()+"");
@@ -95,7 +96,7 @@ public class FormPrenda extends Fragment {
             prenda.setImagen(imgRopa.getTag() +"21");
 
             dbRopaOp.addRopa(prenda.getCodigo(),prenda.getNombre(),prenda.getImagen(),prenda.getTalla(),prenda.getPrecio(),prenda.getStock());
-            Toast.makeText(getContext(), data, Toast.LENGTH_SHORT).show();
+           // Toast.makeText(getContext(), data, Toast.LENGTH_SHORT).show();
         }
     };
 }

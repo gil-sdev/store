@@ -24,7 +24,7 @@
         android:layout_width="396dp"
         android:layout_height="158dp"
         android:contentDescription="toque para garadar imagen"
-        tools:src="@android:mipmap/sym_def_app_icon" />
+        android:src="@mipmap/clothes" />
 
     <TextView
         android:id="@+id/lblCode"
@@ -94,7 +94,7 @@
         android:layout_height="47dp"
         android:ems="10"
         android:inputType="number"
-        tools:text="12" />
+        android:text="12" />
 
     <Button
         android:id="@+id/btnSave"

@@ -59,7 +59,7 @@ public class DBRopaOp {
      * @return A cursor object.
      */
     public Cursor getAllRopa() {
-        return database.rawQuery("SELECT * FROM contact", null);
+        return database.rawQuery("SELECT * FROM ropa", null);
     }
 
 }
