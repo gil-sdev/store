@@ -45,6 +45,7 @@ public class HomeFragment extends Fragment {
         txtSeach = binding.txtSeach;
         tbnSearch = (Button) root.findViewById(R.id.tbnSearch);
 
+        tbnSearch.setOnClickListener(btnBuscar);
 
         recyclerViewPrendas = (RecyclerView) root.findViewById(R.id.recyclerViewPrendas);
         recyclerViewPrendas.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
@@ -64,7 +65,26 @@ public class HomeFragment extends Fragment {
         @Override
         public void onClick(View view) {
             String keyWord =""+ txtSeach.getText();
+            try {
+                listaPrendas.clear();
+                dataAdapterRopa = new DataAdapterRopa(listaPrendas);
+                recyclerViewPrendas.setAdapter(dataAdapterRopa);
 
+                Cursor cursor = dbRopaOp.getSearch(keyWord);
+                while (cursor.moveToNext()) {
+                    // ropa.setImagen( cursor.getInt(cursor.getColumnIndex("id")+"");
+                    ropa.setId(R.mipmap.clothes);
+                    ropa.setNombre(cursor.getString(cursor.getColumnIndex("nombre")));
+                    ropa.setCodigo(cursor.getString(cursor.getColumnIndex("codigo")));
+                    ropa.setTalla(cursor.getString(cursor.getColumnIndex("talla")));
+                    ropa.setPrecio(cursor.getDouble(cursor.getColumnIndex("precio")));
+                    ropa.setStock(cursor.getInt(cursor.getColumnIndex("stock")));
+                    listaPrendas.add(new Ropa(ropa.getId(), ropa.getCodigo(), ropa.getNombre(), ropa.getImagen(), ropa.getTalla(), ropa.getPrecio(), ropa.getStock()));
+                }
+                cursor.close();
+            }catch (Exception e){
+                Toast.makeText(getContext(), "Sin registos "+ e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
 
         }
     };

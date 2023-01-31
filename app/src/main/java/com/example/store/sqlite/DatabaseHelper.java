@@ -16,7 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 @Override
 // It creates a table called contact with three columns: id, telephone, and name.
 public void onCreate(SQLiteDatabase db) {
-    db.execSQL("CREATE TABLE IF NOT EXISTS ropa (id INTEGER PRIMARY KEY AUTOINCREMENT,imagen TEXT NOT NULL, codigo TEXT NOT NULL, nombre TEXT NOT NULL,talla TEXT NOT NULL,precio REAL NOT NULL,stock INTEGER NOT NULL)");
+    db.execSQL("CREATE TABLE IF NOT EXISTS ropa (id INTEGER PRIMARY KEY AUTOINCREMENT,imagen TEXT NOT NULL, codigo TEXT UNIQUE NOT NULL, nombre TEXT NOT NULL,talla TEXT NOT NULL,precio REAL NOT NULL,stock INTEGER NOT NULL)");
     }
 
     @Override

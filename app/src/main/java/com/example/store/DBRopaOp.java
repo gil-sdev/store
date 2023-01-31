@@ -47,8 +47,8 @@ public class DBRopaOp {
             values.put("stock", stock);
             database.insert("ropa", null, values);
 
-        }catch (Error error){
-            Toast.makeText(context, ""+error.getMessage(), Toast.LENGTH_SHORT).show();
+        }catch (Exception e){
+            Toast.makeText(context, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -60,6 +60,11 @@ public class DBRopaOp {
      */
     public Cursor getAllRopa() {
         return database.rawQuery("SELECT * FROM ropa", null);
+    }
+
+    public Cursor getSearch(String key){
+        String query ="SELECT * FROM ropa WHERE nombre LIKE '%"+key+"%' or codigo like '%"+key+"%'" ;
+        return  database.rawQuery(query,null);
     }
 
 }
